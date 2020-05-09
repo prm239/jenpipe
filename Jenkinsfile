@@ -1,9 +1,19 @@
 pipeline {
-    agent { any }
+    agent none
+
     stages {
-        stage('build') {
+
+        stage ('Hello') {
+            agent any
+
             steps {
-                echo 'hello'
+                echo 'Hello, '
+
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
             }
         }
     }
