@@ -7,7 +7,7 @@ pipeline {
             agent any
 
             steps {
-                echo 'Hello..!!'
+                echo 'Hello Jenkins..!!'
             }
         }
     }
